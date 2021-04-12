@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 const wiki = require('./wiki.js');
+var logger = require('morgan');
 
 app.use('/wiki', wiki);
+app.use(logger('dev'));
 
 app.get('/', function (req, res) {
     res.send('Hello World!');
