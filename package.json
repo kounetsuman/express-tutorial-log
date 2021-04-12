@@ -1,0 +1,11 @@
+{
+  "name": "Expressjs",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "repository": "git@github.com:kounetsuman/express-tutorial-log.git",
+  "author": "kounetsuman <punkrou404@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
+}
