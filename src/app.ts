@@ -1,7 +1,8 @@
 import express from 'express';
 const app: express.Express = express()
-import wiki from './wiki.js';
+import wiki from './wiki';
 import logger from 'morgan';
+import { area, perimeter } from './square1'; // Here we require() the name of the file without the (optional) .js file extension
 
 app.use('/wiki', wiki);
 app.use(logger('dev'));
@@ -19,8 +20,4 @@ app.all('/secret', function (req, res, next) {
     next();  // pass control to the next handler
 });
 
-var square1 = require('./square1'); // Here we require() the name of the file without the (optional) .js file extension
-console.log('The area of a square1 with a width of 4 is ' + square1.area(4));
-
-var square2 = require('./square2'); // Here we require() the name of the file without the (optional) .js file extension
-console.log('The area of a square2 with a width of 4 is ' + square2.area(4));
+console.log('The area of a square1 with a width of 4 is ' + area(4));

@@ -1,12 +1,11 @@
-const express = require('express');
-const app = express();
+import express from 'express';
+const app: express.Express = express()
 
 // middleware functionの例
-const a_middleware_function = function (req, res, next) {
-    // ... ここで何かしらの処理
+const a_middleware_function = (req, res, next) => {
     console.log('a_middleware_functionが呼ばれた');
     next();
-}
+};
 
 // Function added with use() for all routes and verbs
 app.use(a_middleware_function);
