@@ -1,5 +1,8 @@
 const express = require('express');
 const app = express();
+const wiki = require('./wiki.js');
+
+app.use('/wiki', wiki);
 
 app.get('/', function (req, res) {
     res.send('Hello World!');
@@ -7,6 +10,11 @@ app.get('/', function (req, res) {
 
 app.listen(8000, function () {
     console.log('Example app listening on port 8000!');
+});
+
+app.all('/secret', function (req, res, next) {
+    console.log('Accessing the secret section ...');
+    next();  // pass control to the next handler
 });
 
 var square1 = require('./square1'); // Here we require() the name of the file without the (optional) .js file extension
