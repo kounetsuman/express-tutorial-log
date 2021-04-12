@@ -1,7 +1,7 @@
-const express = require('express');
-const app = express();
-const wiki = require('./wiki.js');
-var logger = require('morgan');
+import express from 'express';
+const app: express.Express = express()
+import wiki from './wiki.js';
+import logger from 'morgan';
 
 app.use('/wiki', wiki);
 app.use(logger('dev'));

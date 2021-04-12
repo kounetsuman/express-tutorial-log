@@ -1,16 +1,19 @@
 {
   "name": "Expressjs",
   "version": "1.0.0",
-  "main": "src/app.js",
   "repository": "git@github.com:kounetsuman/express-tutorial-log.git",
   "author": "kounetsuman <punkrou404@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon start"
+    "start": "nodemon"
   },
   "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/node": "^14.14.37",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
   }
 }
